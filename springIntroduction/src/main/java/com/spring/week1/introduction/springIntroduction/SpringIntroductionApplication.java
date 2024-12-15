@@ -7,21 +7,28 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SpringIntroductionApplication implements CommandLineRunner{
+//	@Autowired
+//	Apple ap;
+//
+//	@Autowired
+//	Apple ap2;
 	@Autowired
-	Apple ap;
+	DBService dbservice;
 
-	@Autowired
-	Apple ap2;
 	public static void main(String[] args) {
 
 		SpringApplication.run(SpringIntroductionApplication.class, args);
 	}
 
+
 	@Override
 	public void run(String... args) throws Exception {
-		ap.eatApple();
-		ap2.eatApple();
+//		ap.eatApple();
+//		ap2.eatApple();
+//
+//		System.out.println(ap.hashCode());
+		System.out.println(dbservice.getData());
 
-		System.out.println(ap.hashCode());
+
 	}
 }
